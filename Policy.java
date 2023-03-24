@@ -138,16 +138,16 @@ public class Policy {
         return this.height;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public void setHeight(double h) {
+        this.height = h;
     }
 
     public double getWeight() {
         return this.weight;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
+    public void setWeight(double w) {
+        this.weight = w;
     }
 
 }
