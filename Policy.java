@@ -86,66 +86,130 @@ public class Policy {
 
     // * Getters & Setters
 
+    /**
+     * Returns the policy number
+     * @return The policy number
+     */
     public int getNumber() {
         return this.number;
     }
 
+    /**
+     * Sets the policy number
+     * @param number The policy number
+     */
     public void setNumber(int number) {
         this.number = number;
     }
 
+    /**
+     * Returns the policy provider
+     * @return The policy provider
+     */
     public String getProvider() {
         return this.provider;
     }
 
+    /**
+     * Sets the policy provider
+     * @param provider The policy provider
+     */
     public void setProvider(String provider) {
         this.provider = provider;
     }
 
+    /**
+     * Returns the policyholder's first name
+     * @return The policyholder's first name
+     */
     public String getFirstName() {
         return this.firstName;
     }
 
+    /**
+     * Sets the policyholder's first name
+     * @param firstName The policyholder's first name
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    /**
+     * Returns the policyholder's last name
+     * @return The policyholder's last name
+     */
     public String getLastName() {
         return this.lastName;
     }
 
+    /**
+     * Sets the policyholder's last name
+     * @param lastName The policyholder's last name
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    /**
+     * Returns the policyholder's age
+     * @return The policyholder's age
+     */
     public int getAge() {
         return this.age;
     }
 
+    /**
+     * Sets the policyholder's age
+     * @param age The policyholder's age
+     */
     public void setAge(int age) {
         this.age = age;
     }
 
+    /**
+     * Returns the policyholder's smoking status
+     * @return The policyholder's smoking status
+     */
     public String getSmoker() {
         return this.smoker;
     }
 
+    /**
+     * Sets the policyholder's smoking status
+     * @param smoker The policyholder's smoking status
+     */
     public void setSmoker(String smoker) {
         this.smoker = smoker;
     }
 
+    /**
+     * Returns the policyholder's height
+     * @return The policyholder's height
+     */
     public double getHeight() {
         return this.height;
     }
 
+    /**
+     * Sets the policyholder's height
+     * @param h The policyholder's height
+     */
     public void setHeight(double h) {
         this.height = h;
     }
 
+    /**
+     * Returns the policyholder's weight
+     * @return The policyholder's weight
+     */
     public double getWeight() {
         return this.weight;
     }
 
+    /**
+     * Sets the policyholder's weight
+     * @param w The policyholder's weight
+     */
     public void setWeight(double w) {
         this.weight = w;
     }
