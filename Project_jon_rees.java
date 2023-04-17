@@ -55,7 +55,7 @@ public class Project_jon_rees {
             double policyWeight = scnr.nextDouble();
 
             // * Create Object
-            Policy myPolicy = new Policy(policyNumber, policyProvider, policyFirst, policyLast, policyAge, policySmoker, policyHeight, policyWeight);
+            Policy myPolicy = new Policy(policyNumber, policyProvider, new PolicyHolder(policyFirst, policyLast, policyAge, policySmoker, policyHeight, policyWeight));
 
             // Insert the object into the list
             policies.add(myPolicy);
@@ -67,38 +67,11 @@ public class Project_jon_rees {
         for (Policy myPolicy : policies) {
 
             // ? Data
-            // Policy number output
-            System.out.println("Policy Number: " + myPolicy.getNumber());
-
-            // Policy provider output
-            System.out.println("Provider Name: " + myPolicy.getProvider());
-
-            // Policyholder first name output
-            System.out.println("Policyholder's First Name: " + myPolicy.getFirstName());
-
-            // Policyholder last name output
-            System.out.println("Policyholder's Last Name: " + myPolicy.getLastName());
-
-            // Policyholder age output
-            System.out.println("Policyholder's Age: " + myPolicy.getAge());
-
-            // Policyholder smoking status output
-            System.out.println("Policyholder's Smoking Status: " + myPolicy.getSmoker());
-
-            // Policyholder height output
-            System.out.println("Policyholder's Height: " + String.format("%.1f", myPolicy.getHeight()) + " inches");
-
-            // Policyholder weight output
-            System.out.println("Policyholder's Weight: " + String.format("%.1f", myPolicy.getWeight()) + " pounds");
-
-            // Policyholder BMI output
-            System.out.println("Policyholder's BMI: " + String.format("%.2f", myPolicy.getBMI()));
-
-            // Policy price output
-            System.out.println("Policy Price: $" + String.format("%.2f", myPolicy.getPrice()));
+            // Output policy info
+            System.out.println(myPolicy);
 
             // Smoking counter
-            if (myPolicy.getSmoker().equals("smoker")) {
+            if (myPolicy.getPolicyHolder().getSmoker().equals("smoker")) {
                 smokers++;
             } else {
                 nonSmokers++;
@@ -109,8 +82,11 @@ public class Project_jon_rees {
 
         }
 
+        // ? Policy counter output
+        System.out.println("There were " + Policy.getObjects() + " Policy objects created.");
+
         // ? Smoker counter output
-        System.out.println("Number of smokers: " + smokers + " \nNumber of non-smokers: " + nonSmokers);
+        System.out.println("The number of policies with a smoker is: " + smokers + " \nThe number of policies with a non-smoker is: " + nonSmokers);
 
         // * Cleanup
         scnr.close();

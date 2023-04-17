@@ -1,6 +1,8 @@
 public class Policy {
 
     // * Attributes
+    private static int objects = 0;
+
     private int number;
     private String provider;
     private PolicyHolder policyHolder;
@@ -11,6 +13,7 @@ public class Policy {
      * No-arg constructor
      */
     public Policy() {
+        objects++;
     }
 
     /**
@@ -20,6 +23,7 @@ public class Policy {
      * @param policyHolder The PolicyHolder object containing the policy holder's info
      */
     public Policy(int number, String provider, PolicyHolder policyHolder) {
+        objects++;
         this.number = number;
         this.provider = provider;
         this.policyHolder = policyHolder;
@@ -75,7 +79,7 @@ public class Policy {
         val += this.getPolicyHolder().toString() + "\n";
 
         // Add policy price
-        val += "Policy Price: $" + String.format("%.2f", this.getPrice()) + "\n";
+        val += "Policy Price: $" + String.format("%.2f", this.getPrice());
 
         // Return
         return val;
@@ -83,6 +87,14 @@ public class Policy {
     }
 
     // * Getters & Setters
+
+    /**
+     * Return the number of policy objects instantiated
+     * @return The number of policy objects instantiated
+     */
+    public static int getObjects() {
+        return objects;
+    }
 
     /**
      * Returns the policy number

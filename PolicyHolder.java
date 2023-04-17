@@ -84,7 +84,7 @@ public class PolicyHolder {
         val += "Policyholder's Weight: " + String.format("%.1f", this.getWeight()) + " pounds" + "\n";
 
         // Policyholder BMI output
-        val += "Policyholder's BMI: " + String.format("%.2f", this.getBMI()) + "\n";
+        val += "Policyholder's BMI: " + String.format("%.2f", this.getBMI());
 
         // Return
         return val;
