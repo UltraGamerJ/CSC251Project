@@ -59,6 +59,29 @@ public class Policy {
 
     }
 
+    @Override
+    public String toString() {
+        
+        // Initialize String object
+        String val = "";
+
+        // Add policy number
+        val += "Policy Number: " + this.getNumber() + "\n";
+
+        // Add provider name
+        val += "Provider Name: " + this.getProvider() + "\n";
+
+        // Add policy holder
+        val += this.getPolicyHolder().toString() + "\n";
+
+        // Add policy price
+        val += "Policy Price: $" + String.format("%.2f", this.getPrice()) + "\n";
+
+        // Return
+        return val;
+
+    }
+
     // * Getters & Setters
 
     /**
