@@ -59,6 +59,38 @@ public class PolicyHolder {
 
     }
 
+    @Override
+    public String toString() {
+        
+        // Initialize the return string object
+        String val = "";
+
+        // Policyholder first name output
+        val += "Policyholder's First Name: " + this.getFirstName() + "\n";
+
+        // Policyholder last name output
+        val += "Policyholder's Last Name: " + this.getLastName() + "\n";
+
+        // Policyholder age output
+        val += "Policyholder's Age: " + this.getAge() + "\n";
+
+        // Policyholder smoking status output
+        val += "Policyholder's Smoking Status: " + this.getSmoker() + "\n";
+
+        // Policyholder height output
+        val += "Policyholder's Height: " + String.format("%.1f", this.getHeight()) + " inches" + "\n";
+
+        // Policyholder weight output
+        val += "Policyholder's Weight: " + String.format("%.1f", this.getWeight()) + " pounds" + "\n";
+
+        // Policyholder BMI output
+        val += "Policyholder's BMI: " + String.format("%.2f", this.getBMI()) + "\n";
+
+        // Return
+        return val;
+
+    }
+
     // * Getters and Setters
 
     /**
